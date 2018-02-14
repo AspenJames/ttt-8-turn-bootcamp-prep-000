@@ -11,10 +11,10 @@ def input_to_index(user_input)
 end
 
 def valid_move?(board, index)
-  if board[index] == " " || board[index] == "" || board[index] == nil
-    return true
-  elsif index < 0 || index > board.length
+  if index < 0 || index > board.length
     return false
+  elsif board[index] == " " || board[index] == "" || board[index] == nil
+    return true
   else
     return false
   end
