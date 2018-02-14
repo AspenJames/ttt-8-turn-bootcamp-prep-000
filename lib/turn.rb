@@ -10,12 +10,12 @@ def input_to_index(user_input)
   index = user_input.to_i - 1
 end
 
-def valid_move?(board,index)
-  if index > board.length
+def position_taken?(board, index)
+  if board[index] == " " || board[index] == "" || board[index] == nil
     return false
-  elsif board[index] == "" || board[index] == " " || board[index] == nil
+  elsif index < 0 || index > board.length
     return true
   else
-    return false
+    return true
   end
 end
